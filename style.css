@@ -1,0 +1,94 @@
+/* Custom animations & fine-tuned styles */
+
+@keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
+
+/* Custom fade-in for the completed modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Customizing range slider styling */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #6366f1; /* Indigo-500 */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+    transition: transform 0.1s, background-color 0.1s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    background: #818cf8; /* Indigo-400 */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 50%;
+    background: #6366f1;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+    transition: transform 0.1s, background-color 0.1s;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.15);
+    background: #818cf8;
+}
+
+/* Dropzone dragover class */
+.dropzone-dragover {
+    border-color: #6366f1 !important;
+    background-color: rgba(99, 102, 241, 0.08) !important;
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.15) !important;
+    transform: scale(1.01);
+}
+
+/* Custom Scrollbar for Textareas */
+textarea::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.15);
+    border-radius: 8px;
+    border: 2px solid rgba(15, 23, 42, 0.6);
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.3);
+}
+
+/* Base focus styling reset for custom elements */
+select, input, textarea {
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
